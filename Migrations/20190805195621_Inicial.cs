@@ -2,7 +2,7 @@
 
 namespace SIPA.Migrations
 {
-    public partial class Inicial4 : Migration
+    public partial class Inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace SIPA.Migrations
 {
     [DbContext(typeof(SIPAContext))]
-    [Migration("20190805182716_Inicial1")]
-    partial class Inicial1
+    [Migration("20190805195621_Inicial")]
+    partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

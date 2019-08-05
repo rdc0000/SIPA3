@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace SIPA.Migrations
 {
     [DbContext(typeof(SIPAContext))]
-    [Migration("20190804164618_Inicial2")]
+    [Migration("20190805200807_Inicial2")]
     partial class Inicial2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -160,6 +160,43 @@ namespace SIPA.Migrations
                     b.ToTable("MetodoPago");
                 });
 
+            modelBuilder.Entity("SIPA.Models.Pedido", b =>
+                {
+                    b.Property<int>("PedidoID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AutoservicioID");
+
+                    b.Property<int>("ClienteID");
+
+                    b.Property<string>("Direccion");
+
+                    b.Property<int>("DomicilioID");
+
+                    b.Property<int>("EmpleadoID");
+
+                    b.Property<DateTime>("FechaHora");
+
+                    b.Property<int>("MetodoPagoID");
+
+                    b.Property<int>("Total");
+
+                    b.HasKey("PedidoID");
+
+                    b.HasIndex("AutoservicioID");
+
+                    b.HasIndex("ClienteID");
+
+                    b.HasIndex("DomicilioID");
+
+                    b.HasIndex("EmpleadoID");
+
+                    b.HasIndex("MetodoPagoID");
+
+                    b.ToTable("Pedido");
+                });
+
             modelBuilder.Entity("SIPA.Models.Proveedor", b =>
                 {
                     b.Property<int>("ProveedorID")
@@ -214,6 +251,34 @@ namespace SIPA.Migrations
                     b.HasOne("SIPA.Models.Transporte", "Transporte")
                         .WithMany()
                         .HasForeignKey("TransporteID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("SIPA.Models.Pedido", b =>
+                {
+                    b.HasOne("SIPA.Models.Autoservicio", "Autoservicio")
+                        .WithMany()
+                        .HasForeignKey("AutoservicioID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("SIPA.Models.Cliente", "Cliente")
+                        .WithMany()
+                        .HasForeignKey("ClienteID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("SIPA.Models.Domicilio", "Domicilio")
+                        .WithMany()
+                        .HasForeignKey("DomicilioID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("SIPA.Models.Empleado", "Empleado")
+                        .WithMany()
+                        .HasForeignKey("EmpleadoID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("SIPA.Models.MetodoPago", "MetodoPago")
+                        .WithMany()
+                        .HasForeignKey("MetodoPagoID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
