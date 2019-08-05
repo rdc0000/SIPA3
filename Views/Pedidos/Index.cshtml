@@ -31,7 +31,7 @@
                 @Html.DisplayNameFor(model => model.FechaHora)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FormaPago)
+                @Html.DisplayNameFor(model => model.Direccion)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Total)
@@ -43,16 +43,18 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.Empleado.Nombre)
                 @Html.DisplayFor(modelItem => item.Empleado.Apellido)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Autoservicio.Direccion)
+                @Html.DisplayFor(modelItem => item.Autoservicio.Nombre)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Cliente.Nombre)
                 @Html.DisplayFor(modelItem => item.Cliente.Apellido)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.MetodoPago.NumeroReferencia)
+                @Html.DisplayFor(modelItem => item.MetodoPago.Nombre)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Domicilio.DomicilioID)
@@ -61,7 +63,7 @@
                 @Html.DisplayFor(modelItem => item.FechaHora)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.FormaPago)
+                @Html.DisplayFor(modelItem => item.Cliente.Direccion)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Total)

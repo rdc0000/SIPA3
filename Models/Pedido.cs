@@ -33,7 +33,7 @@ namespace SIPA.Models
         public Domicilio Domicilio { get; set; }
 
         public DateTime FechaHora { get; set; }
-        public string FormaPago { get; set; }
+        public string Direccion { get; set; }
         public int Total { get; set; }
 
 

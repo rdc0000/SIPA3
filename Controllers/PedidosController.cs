@@ -51,8 +51,8 @@ namespace SIPA.Controllers
         // GET: Pedidos/Create
         public IActionResult Create()
         {
-            ViewData["AutoservicioID"] = new SelectList(_context.Autoservicio, "AutoservicioID", "Nombre");
-            ViewData["ClienteID"] = new SelectList(_context.Cliente, "ClienteID", "Nombre ", "Apellido");
+            ViewData["AutoservicioID"] = new SelectList(_context.Autoservicio, "AutoservicioID", "Direccion");
+            ViewData["ClienteID"] = new SelectList(_context.Cliente, "ClienteID", "Apellido");
             ViewData["DomicilioID"] = new SelectList(_context.Domicilio, "DomicilioID", "DomicilioID");
             ViewData["EmpleadoID"] = new SelectList(_context.Empleado, "EmpleadoID", "Apellido");
             ViewData["MetodoPagoID"] = new SelectList(_context.MetodoPago, "MetodoPagoID", "NumeroReferencia");
@@ -64,7 +64,7 @@ namespace SIPA.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PedidoID,EmpleadoID,AutoservicioID,ClienteID,MetodoPagoID,DomicilioID,FechaHora,FormaPago,Total")] Pedido pedido)
+        public async Task<IActionResult> Create([Bind("PedidoID,EmpleadoID,AutoservicioID,ClienteID,MetodoPagoID,DomicilioID,FechaHora,Direccion,Total")] Pedido pedido)
         {
             if (ModelState.IsValid)
             {
@@ -106,7 +106,7 @@ namespace SIPA.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PedidoID,EmpleadoID,AutoservicioID,ClienteID,MetodoPagoID,DomicilioID,FechaHora,FormaPago,Total")] Pedido pedido)
+        public async Task<IActionResult> Edit(int id, [Bind("PedidoID,EmpleadoID,AutoservicioID,ClienteID,MetodoPagoID,DomicilioID,FechaHora,Direccion,Total")] Pedido pedido)
         {
             if (id != pedido.PedidoID)
             {
