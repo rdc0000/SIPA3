@@ -22,7 +22,7 @@ namespace SIPA.Controllers
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult indexTienda()
         {
             ViewData["Message"] = "Your contact page.";
 

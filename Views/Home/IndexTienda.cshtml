@@ -1,0 +1,1200 @@
+﻿@{
+    ViewData["Title"] = "indexTienda";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Ingresar SIPA</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+          crossorigin="anonymous">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/shop-homepage.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h5 class="my-4"><i class="far fa-user"></i> Mi cuenta</h5>
+                <div class="list-group">
+
+                    <div class="row">
+                        @*<div class="col-4">
+                            <div class=" list-group" id="list-tab" role="tablist">
+                                <a class="btn-warning list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#legumbres" role="tab" aria-controls="home">Legumbres</a>
+                                <a class="btn-warning list-group-item list-group-item-action " id="list-home-list" data-toggle="list" href="#cereales" role="tab" aria-controls="home">Cereales</a>
+                                <a class="btn-warning list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#lacteos" role="tab" aria-controls="profile">Lacteos</a>
+                                <a class="btn-warning list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#aseo" role="tab" aria-controls="messages">Aseo</a>
+                                <a class="btn-warning list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#frutasVerduras" role="tab" aria-controls="settings">Frutas y verduras</a>
+                            </div>
+                        </div>*@
+                        <div class="col-8">
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="legumbres" role="tabpanel" aria-labelledby="list-home-list">
+                                    <h1>Legumbres</h1>
+                                    <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+
+
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                        </ol>
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="carousel-item active">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta1.jpg" alt="First slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta2.jpg" alt="Second slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta3.jpg" alt="Third slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta4.jpg" alt="fourth  slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta5.jpg" alt="fifth slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta6.jpg" alt="sixth
+                                slide">
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/legumbres/frijol_1.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Frijoles la costeña</a>
+                                                    </h4>
+                                                    <h5>$4500 kl</h5>
+                                                    <p class="card-text">Frijol enlatado listo para consumir</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/legumbres/frijol_2.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Frijoles luiciana</a>
+                                                    </h4>
+                                                    <h5>$2900 kl</h5>
+                                                    <p class="card-text">Frijol rojo luiciana</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/legumbres/frijol_3.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Frijoles la soberana</a>
+                                                    </h4>
+                                                    <h5>$3500 kl</h5>
+                                                    <p class="card-text">Frijol amariilo facil de preparar</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/legumbres/garbanzo_1.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Garbanzo Luango</a>
+                                                    </h4>
+                                                    <h5>$1600 </h5>
+                                                    <p class="card-text">Libra de garbanzo facil de preparar</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/legumbres/garbanzo_2.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Garbanzo Arcor</a>
+                                                    </h4>
+                                                    <h5>$2600 </h5>
+                                                    <p class="card-text">Garbanzo enlatado </p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/legumbres/garbanzo_3.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Garbanzo la asturiana</a>
+                                                    </h4>
+                                                    <h5>$1650</h5>
+                                                    <p class="card-text">Libra de grabanzo</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/legumbres/lenteja_1.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Lentejas el plebeyo</a>
+                                                    </h4>
+                                                    <h5>$2300 </h5>
+                                                    <p class="card-text">Libra de lenteja</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/legumbres/lenteja_2.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Lentejas reina</a>
+                                                    </h4>
+                                                    <h5>$1900 </h5>
+                                                    <p class="card-text">libra lenteja reina</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/legumbres/lenteja_3.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Lentejas la asturiana</a>
+                                                    </h4>
+                                                    <h5>$1800 kl</h5>
+                                                    <p class="card-text">Libra de lenteja </p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade show active" id="cereales" role="tabpanel" aria-labelledby="list-home-list">
+                                    <h1>Cereales</h1>
+                                    <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+
+
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                        </ol>
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="carousel-item active">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta1.jpg" alt="First slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta2.jpg" alt="Second slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta3.jpg" alt="Third slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta4.jpg" alt="fourth  slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta5.jpg" alt="fifth slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta6.jpg" alt="sixth
+                                  slide">
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/cereales/arroz_1.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Arroz fino arroz</a>
+                                                    </h4>
+                                                    <h5>$3800 </h5>
+                                                    <p class="card-text">Kilo de arroz fino arroz</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/cereales/arroz_2.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Arroz diana</a>
+                                                    </h4>
+                                                    <h5>$1450</h5>
+                                                    <p class="card-text">Libra de arroz diana</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/cereales/arroz_3.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Arroz Roa</a>
+                                                    </h4>
+                                                    <h5>$1600</h5>
+                                                    <p class="card-text">Libra de arroz roa</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/cereales/avena_1.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Avena don simon</a>
+                                                    </h4>
+                                                    <h5>$2200 </h5>
+                                                    <p class="card-text">Avena don simon en hojuelas</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/cereales/avena_2.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Avena alpina</a>
+                                                    </h4>
+                                                    <h5>$1650</h5>
+                                                    <p class="card-text">Avena alpina original</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/cereales/avena_3.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Avena quaker</a>
+                                                    </h4>
+                                                    <h5>$1200 kl</h5>
+                                                    <p class="card-text">Avena tradicional queaker </p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade show active" id="lacteos" role="tabpanel" aria-labelledby="list-home-list">
+                                    <h1>Lacteos</h1>
+                                    <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+
+
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                        </ol>
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="carousel-item active">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta1.jpg" alt="First slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta2.jpg" alt="Second slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta3.jpg" alt="Third slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta4.jpg" alt="fourth  slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta5.jpg" alt="fifth slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta6.jpg" alt="sixth
+                                slide">
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/lacteos/leche_1.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Leche Alqueira</a>
+                                                    </h4>
+                                                    <h5>$1800 </h5>
+                                                    <p class="card-text">Bolsa de leche alqueria entera de 1200 ml</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/lacteos/leche_2.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Leche parmalat</a>
+                                                    </h4>
+                                                    <h5>$1200 </h5>
+                                                    <p class="card-text">Bolsa de leche entera parlamalat de 500ml</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/lacteos/leche_3.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Leche algarra</a>
+                                                    </h4>
+                                                    <h5>$1900 </h5>
+                                                    <p class="card-text">Bolsa de leche entera algarra de 1000ml</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/lacteos/mantequilla_1.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Mantequilla rama</a>
+                                                    </h4>
+                                                    <h5>$3200 </h5>
+                                                    <p class="card-text">Mantequilla rama perfecta para tus tostadas</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/lacteos/mantequilla_2.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Mantequilla la fina</a>
+                                                    </h4>
+                                                    <h5>$1600 </h5>
+                                                    <p class="card-text">Mantequilla la fina </p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/lacteos/mantequilla_3.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Mantequilla Campi</a>
+                                                    </h4>
+                                                    <h5>$1900 </h5>
+                                                    <p class="card-text">Manteuilla campi para tus tostadas</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/lacteos/queso_1.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Queso alerma</a>
+                                                    </h4>
+                                                    <h5>$5500</h5>
+                                                    <p class="card-text">Libra de queso parmesano alerma</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/lacteos/queso_2.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Queso colanta</a>
+                                                    </h4>
+                                                    <h5>$3500</h5>
+                                                    <p class="card-text">Libra de queso colanta doble crema</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/lacteos/queso_3.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Queso papialpa</a>
+                                                    </h4>
+                                                    <h5>$4900 </h5>
+                                                    <p class="card-text">Libra de queso paialpa para asar</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/lacteos/yogurt_1.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Yogurt alqueria</a>
+                                                    </h4>
+                                                    <h5>$1200 </h5>
+                                                    <p class="card-text">Yogurt alqueria</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/lacteos/yogurt_2.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Yogurt alpina</a>
+                                                    </h4>
+                                                    <h5>$1500 </h5>
+                                                    <p class="card-text">Yogurt regeneris</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/lacteos/yogurt_3.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Yogurt alpina</a>
+                                                    </h4>
+                                                    <h5>$2500 </h5>
+                                                    <p class="card-text">Yogurt alpiuna griego</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade show active" id="aseo" role="tabpanel" aria-labelledby="list-home-list">
+                                    <h1>Aseo</h1>
+                                    <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+
+
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                        </ol>
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="carousel-item active">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta1.jpg" alt="First slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta2.jpg" alt="Second slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta3.jpg" alt="Third slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta4.jpg" alt="fourth  slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta5.jpg" alt="fifth slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta6.jpg" alt="sixth
+                                slide">
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/aseo/detergente_1.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Detergente top</a>
+                                                    </h4>
+                                                    <h5>$6200 </h5>
+                                                    <p class="card-text">Detergente top para ropa liquido</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/aseo/detergente_2.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Detergente fab</a>
+                                                    </h4>
+                                                    <h5>$7500 </h5>
+                                                    <p class="card-text">Detergente fab liquido</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/aseo/detergente_3.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Detergente ariel</a>
+                                                    </h4>
+                                                    <h5>$3500 </h5>
+                                                    <p class="card-text">Detergente ariel</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/aseo/cloro_1.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Cloro apvaqua</a>
+                                                    </h4>
+                                                    <h5>$10500 </h5>
+                                                    <p class="card-text">Cloro en pastillas</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/aseo/cloro_2.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Cloro bufalo</a>
+                                                    </h4>
+                                                    <h5>$8500</h5>
+                                                    <p class="card-text">Cloro bufalo en pastillas</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/aseo/cloro_3.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Cloro clorox</a>
+                                                    </h4>
+                                                    <h5>$12000 </h5>
+                                                    <p class="card-text">Clorox liquido de 1500ml</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/aseo/jabonL_1.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Jabon salvo</a>
+                                                    </h4>
+                                                    <h5>$8500 </h5>
+                                                    <p class="card-text">Jabon de loza salvo de 850 ml</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/aseo/jabonL_2.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Jabon lazz clear</a>
+                                                    </h4>
+                                                    <h5>$6800</h5>
+                                                    <p class="card-text">Jabon liquido lazz clear de 750 ml</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/aseo/jabonL_3.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Jabon axion</a>
+                                                    </h4>
+                                                    <h5>$4500 </h5>
+                                                    <p class="card-text">Javon de loza axion</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/aseo/papelH_1.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Papel higienico elite</a>
+                                                    </h4>
+                                                    <h5>$12500 </h5>
+                                                    <p class="card-text">Papel higienico elite premium 4 hojas de 250mt x 10cm</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/aseo/papelH_2.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Papel higienico scott</a>
+                                                    </h4>
+                                                    <h5>$11500 </h5>
+                                                    <p class="card-text">Papel higienico scott rindemax 4 hojas de 300mt x 10cm</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/aseo/papelH_3.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Papel higienico familia</a>
+                                                    </h4>
+                                                    <h5>$15000 </h5>
+                                                    <p class="card-text">Papel higienico familia megarollo 4 hojas de 250mt x 10cm</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade show active" id="frutasVerduras" role="tabpanel" aria-labelledby="list-home-list">
+                                    <h1>Frutas y verduras</h1>
+                                    <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+
+
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                        </ol>
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="carousel-item active">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta1.jpg" alt="First slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta2.jpg" alt="Second slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta3.jpg" alt="Third slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta4.jpg" alt="fourth  slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta5.jpg" alt="fifth slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block img-fluid" src="img/tienda/oferta6.jpg" alt="sixth
+                                slide">
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/legumbres/lenteja_3.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Lentejas</a>
+                                                    </h4>
+                                                    <h5>$3500 kl</h5>
+                                                    <p class="card-text">Frijol enlatado listo para consumir</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/legumbres/lenteja_3.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Lentejas</a>
+                                                    </h4>
+                                                    <h5>$3500 kl</h5>
+                                                    <p class="card-text">Frijol enlatado listo para consumir</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/legumbres/lenteja_3.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Lentejas</a>
+                                                    </h4>
+                                                    <h5>$3500 kl</h5>
+                                                    <p class="card-text">Frijol enlatado listo para consumir</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/legumbres/lenteja_3.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Lentejas</a>
+                                                    </h4>
+                                                    <h5>$3500 kl</h5>
+                                                    <p class="card-text">Frijol enlatado listo para consumir</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="img/portfolio/legumbres/lenteja_3.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Lentejas</a>
+                                                    </h4>
+                                                    <h5>$3500 kl</h5>
+                                                    <p class="card-text">Frijol enlatado listo para consumir</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100">
+                                                <a href="#"><img class="card-img-top" src="~/img/portfolio/legumbres/lenteja_3.jpg" alt=""></a>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">
+                                                        <a href="#">Lentejas</a>
+                                                    </h4>
+                                                    <h5>$3500 kl</h5>
+                                                    <p class="card-text">Frijol enlatado listo para consumir</p>
+                                                    <input type="number" class="form-control" placeholder="Cantidad" aria-label="cantidad">
+                                                    <div class="input-group mb-3">
+                                                        <input type="number" class="form-control" placeholder="Precio " aria-label="precio">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+        </div>
+
+    </footer>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,19 @@
+﻿@model IEnumerable<SIPA.Models.Autoservicio>
+@{
+    ViewData["Title"] = "IndexCl";
+}
+
+<h2>IndexCl</h2>
+@foreach (var item in Model)
+{
+    <div class="media">
+        <img src="..." class="align-self-center mr-3" alt="...">
+        <div class="media-body">
+
+            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+            <p class="card-text">@Html.DisplayFor(modelItem => item.Direccion)</p>
+
+        </div>
+    </div>
+}
+

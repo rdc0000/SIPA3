@@ -24,6 +24,12 @@ namespace SIPA.Controllers
             return View(await _context.Autoservicio.ToListAsync());
         }
 
+        // GET: Autoservicios/IndexCl
+        public async Task<IActionResult> IndexCl()
+        {
+            return View(await _context.Autoservicio.ToListAsync());
+        }
+
         // GET: Autoservicios/Details/5
         public async Task<IActionResult> Details(int? id)
         {
