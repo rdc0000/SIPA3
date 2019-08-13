@@ -19,6 +19,7 @@ namespace SIPA.Models
         public string Cantidad { get; set; }
         public int PrecioProveedor { get; set; }
         public int PrecioVenta { get; set; }
+        public string Imagen { get; set; }
 
     }
 }

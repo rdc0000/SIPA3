@@ -26,6 +26,8 @@ namespace SIPA.Migrations
 
                     b.Property<string>("Cantidad");
 
+                    b.Property<string>("Imagen");
+
                     b.Property<string>("Nombre");
 
                     b.Property<int>("PrecioProveedor");

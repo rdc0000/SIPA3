@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace SIPA.Migrations
 {
     [DbContext(typeof(SIPAContext))]
-    [Migration("20190805200807_Inicial2")]
-    partial class Inicial2
+    [Migration("20190812202653_Inicial")]
+    partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -53,6 +53,8 @@ namespace SIPA.Migrations
                         .IsRequired();
 
                     b.Property<bool>("Estado");
+
+                    b.Property<int>("MyProperty");
 
                     b.Property<string>("Nombre")
                         .IsRequired()

@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace SIPA.Migrations
 {
     [DbContext(typeof(SIPAContext))]
-    [Migration("20190805195621_Inicial")]
-    partial class Inicial
+    [Migration("20190813004152_Dos")]
+    partial class Dos
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,6 +27,8 @@ namespace SIPA.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Cantidad");
+
+                    b.Property<string>("Imagen");
 
                     b.Property<string>("Nombre");
 

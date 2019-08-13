@@ -25,6 +25,13 @@ namespace SIPA.Controllers
             return View(await sIPAContext.ToListAsync());
         }
 
+        // GET: Articulos/IndexCli
+        public async Task<IActionResult> IndexCli()
+        {
+            var sIPAContext = _context.Articulo.Include(a => a.Proveedor);
+            return View(await sIPAContext.ToListAsync());
+        }
+
         // GET: Articulos/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -47,7 +54,7 @@ namespace SIPA.Controllers
         // GET: Articulos/Create
         public IActionResult Create()
         {
-            ViewData["ProveedorID"] = new SelectList(_context.Proveedor, "ProveedorID", "Nombre");
+            ViewData["ProveedorID"] = new SelectList(_context.Proveedor, "ProveedorID", "Direccion");
             return View();
         }
 
@@ -56,7 +63,7 @@ namespace SIPA.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ArticuloID,ProveedorID,Nombre,Cantidad,PrecioProveedor,PrecioVenta")] Articulo articulo)
+        public async Task<IActionResult> Create([Bind("ArticuloID,ProveedorID,Nombre,Cantidad,PrecioProveedor,PrecioVenta,Imagen")] Articulo articulo)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +71,7 @@ namespace SIPA.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ProveedorID"] = new SelectList(_context.Proveedor, "ProveedorID", "Nombre", articulo.ProveedorID);
+            ViewData["ProveedorID"] = new SelectList(_context.Proveedor, "ProveedorID", "Direccion", articulo.ProveedorID);
             return View(articulo);
         }
 
@@ -81,7 +88,7 @@ namespace SIPA.Controllers
             {
                 return NotFound();
             }
-            ViewData["ProveedorID"] = new SelectList(_context.Proveedor, "ProveedorID", "Nombre", articulo.ProveedorID);
+            ViewData["ProveedorID"] = new SelectList(_context.Proveedor, "ProveedorID", "Direccion", articulo.ProveedorID);
             return View(articulo);
         }
 
@@ -90,7 +97,7 @@ namespace SIPA.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ArticuloID,ProveedorID,Nombre,Cantidad,PrecioProveedor,PrecioVenta")] Articulo articulo)
+        public async Task<IActionResult> Edit(int id, [Bind("ArticuloID,ProveedorID,Nombre,Cantidad,PrecioProveedor,PrecioVenta,Imagen")] Articulo articulo)
         {
             if (id != articulo.ArticuloID)
             {
@@ -117,7 +124,7 @@ namespace SIPA.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ProveedorID"] = new SelectList(_context.Proveedor, "ProveedorID", "Nombre", articulo.ProveedorID);
+            ViewData["ProveedorID"] = new SelectList(_context.Proveedor, "ProveedorID", "Direccion", articulo.ProveedorID);
             return View(articulo);
         }
 
