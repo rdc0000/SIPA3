@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SIPA.Models;
+using SIPA.Controllers;
 
 namespace SIPA.Controllers
 {
@@ -69,7 +70,7 @@ namespace SIPA.Controllers
             {
                 _context.Add(articulo);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Controllers.HomeController.Tablas));
             }
             ViewData["ProveedorID"] = new SelectList(_context.Proveedor, "ProveedorID", "Direccion", articulo.ProveedorID);
             return View(articulo);
