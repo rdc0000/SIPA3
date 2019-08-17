@@ -1,10 +1,10 @@
 ﻿@model SIPA.Models.Autoservicio
 
 @{
-    ViewData["Title"] = "Detalles";
+    ViewData["Title"] = "Details";
 }
 
-<h2>Detalles</h2>
+<h2>Details</h2>
 
 <div>
     <h4>Autoservicio</h4>
@@ -34,9 +34,15 @@
         <dd>
             @Html.DisplayFor(model => model.Estado)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Imagen)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Imagen)
+        </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.AutoservicioID"  class="btn btn-success">Editar</a> |
-    <a asp-action="Index"  class="btn btn-danger">Volver</a>
+    <a asp-action="Edit" asp-route-id="@Model.AutoservicioID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
 </div>

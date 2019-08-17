@@ -16,7 +16,8 @@ namespace SIPA.Models
         public int ProveedorID { get; set; }
         public Proveedor Proveedor { get; set; }
         public string Nombre { get; set; }
-        public string Cantidad { get; set; }
+        public string TipoProducto { get; set; }
+        public int Cantidad { get; set; }
         public int PrecioProveedor { get; set; }
         public int PrecioVenta { get; set; }
         public string Imagen { get; set; }
