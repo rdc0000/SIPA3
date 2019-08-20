@@ -10,7 +10,7 @@ namespace SIPA.Models
     {
         public int AutoservicioID { get; set; }
         [Required]
-        [StringLength(50, MinimumLength =3,ErrorMessage ="Nombre maximo de 50 y minimo de 3 caracteres")]
+        [StringLength(50, MinimumLength =3,ErrorMessage ="Nombre maximo de 50 caracteres y minimo de 3 caracteres")]
         public string Nombre { get; set; }
         [Required]
         public string Direccion { get; set; }

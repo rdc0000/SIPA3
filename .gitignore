@@ -347,3 +347,7 @@ healthchecksdb
 
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
+Migrations/20190812202653_Inicial.Designer.cs
+Migrations/20190813004152_Dos.cs
+Migrations/20190813004152_Dos.Designer.cs
+Migrations/20190812202653_Inicial.Designer.cs
