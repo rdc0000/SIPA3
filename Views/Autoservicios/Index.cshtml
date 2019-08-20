@@ -24,6 +24,10 @@
             <th>
                 @Html.DisplayNameFor(model => model.Estado)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imagen)
+
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -41,6 +45,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Imagen)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.AutoservicioID" class="btn btn-success">Editar</a> |

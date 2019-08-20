@@ -24,7 +24,7 @@ namespace SIPA.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Cantidad");
+                    b.Property<int>("Cantidad");
 
                     b.Property<string>("Imagen");
 
@@ -35,6 +35,8 @@ namespace SIPA.Migrations
                     b.Property<int>("PrecioVenta");
 
                     b.Property<int>("ProveedorID");
+
+                    b.Property<string>("TipoProducto");
 
                     b.HasKey("ArticuloID");
 
@@ -53,6 +55,8 @@ namespace SIPA.Migrations
                         .IsRequired();
 
                     b.Property<bool>("Estado");
+
+                    b.Property<string>("Imagen");
 
                     b.Property<string>("Nombre")
                         .IsRequired()

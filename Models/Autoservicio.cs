@@ -17,6 +17,6 @@ namespace SIPA.Models
         [Required]
         public string Telefono { get; set; }
         public Boolean Estado { get; set; }
-
+        public string Imagen { get; set; }
     }
 }

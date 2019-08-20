@@ -2,40 +2,51 @@
 @{
     ViewData["Title"] = "IndexCli";
 }
+
+
 @foreach (var item in Model)
 {
-    <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="@Html.DisplayFor(modelItem => item.Imagen)" width="300" height="200" alt=""></a>
-            <div class="card-body">
+    <div class="overflow-y-auto overflow-x-hidden exito-categroy-menu-179">
+        <ul class="list pl0 mt0 ">
+            <li typeof="@Html.DisplayFor(modelItem => item.TipoProducto)">
+                <h1>@Html.DisplayFor(modelItem => item.TipoProducto)</h1>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="@Html.DisplayFor(modelItem => item.Imagen)" width="300" height="200" alt=""></a>
+                        <div class="card-body">
 
-                <h4 class="card-title">
+                            <h4 class="card-title">
 
-                    @Html.DisplayFor(modelItem => item.Nombre)
+                                @Html.DisplayFor(modelItem => item.Nombre)
 
-                </h4>
-                <h5>@Html.DisplayFor(modelItem => item.PrecioVenta)</h5>
-                <p class="card-text">Frijol enlatado listo para consumir</p>
-                <div class="input-group mb-3 ">
-                    
-                    <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="far fa-plus-square"></i></button>
-                    <input type="number" id="cantidad" class="cantidad form-control" placeholder="Cantidad" aria-label="cantidad">
-                    <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="far fa-minus-square"></i></button>
-</div>
-                    <div class="input-group mb-3 ">
+                            </h4>
+                            <h5>@Html.DisplayFor(modelItem => item.PrecioVenta)</h5>
+                            <p class="card-text">Frijol enlatado listo para consumir</p>
+                            <div class="input-group mb-3 ">
 
-                        @if (item.PrecioProveedor > 100)
-                        {
-                            int ope = 2 * item.PrecioVenta;
-                            <input class="form-control" type="text" placeholder="@ope" readonly>
+                                <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="far fa-plus-square"></i></button>
+                                <input type="number" id="cantidad" class="cantidad form-control" placeholder="Cantidad" aria-label="cantidad">
+                                <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="far fa-minus-square"></i></button>
+                            </div>
+                            <div class="input-group mb-3 ">
 
-                        }
+                                @if (item.PrecioProveedor > 100)
+                                {
+                                    int ope = 2 * item.PrecioVenta;
+                                    <input class="form-control" type="text" placeholder="@ope" readonly>
 
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-warning btn-block" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                }
+
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-warning btn-block" type="button" id="button-addon2"><i class="fas fa-cart-arrow-down"></i></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </li>
+        </ul>
     </div>
+    
 }
+<a class="nav-link js-scroll-trigger" asp-area="" asp-controller="Clientes" asp-action="IndexCl">Enviar</a>

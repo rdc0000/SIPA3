@@ -59,7 +59,7 @@ namespace SIPA.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AutoservicioID,Nombre,Direccion,Telefono,Estado")] Autoservicio autoservicio)
+        public async Task<IActionResult> Create([Bind("AutoservicioID,Nombre,Direccion,Telefono,Estado,Imagen")] Autoservicio autoservicio)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +91,7 @@ namespace SIPA.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AutoservicioID,Nombre,Direccion,Telefono,Estado")] Autoservicio autoservicio)
+        public async Task<IActionResult> Edit(int id, [Bind("AutoservicioID,Nombre,Direccion,Telefono,Estado,Imagen")] Autoservicio autoservicio)
         {
             if (id != autoservicio.AutoservicioID)
             {
