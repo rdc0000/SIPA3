@@ -101,6 +101,29 @@ namespace SIPA.Migrations
                     b.ToTable("Cliente");
                 });
 
+            modelBuilder.Entity("SIPA.Models.DetallePedido", b =>
+                {
+                    b.Property<int>("DetallePedidoID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ArticuloID");
+
+                    b.Property<int>("Cantidad");
+
+                    b.Property<int>("PedidoID");
+
+                    b.Property<int>("Precio");
+
+                    b.HasKey("DetallePedidoID");
+
+                    b.HasIndex("ArticuloID");
+
+                    b.HasIndex("PedidoID");
+
+                    b.ToTable("DetallePedido");
+                });
+
             modelBuilder.Entity("SIPA.Models.Domicilio", b =>
                 {
                     b.Property<int>("DomicilioID")
@@ -247,6 +270,19 @@ namespace SIPA.Migrations
                     b.HasOne("SIPA.Models.Proveedor", "Proveedor")
                         .WithMany()
                         .HasForeignKey("ProveedorID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("SIPA.Models.DetallePedido", b =>
+                {
+                    b.HasOne("SIPA.Models.Articulo", "Articulo")
+                        .WithMany()
+                        .HasForeignKey("ArticuloID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("SIPA.Models.Pedido", "Pedido")
+                        .WithMany()
+                        .HasForeignKey("PedidoID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

@@ -29,4 +29,6 @@ using SIPA.Models;
         public DbSet<SIPA.Models.Domicilio> Domicilio { get; set; }
 
         public DbSet<SIPA.Models.Pedido> Pedido { get; set; }
+
+        public DbSet<SIPA.Models.DetallePedido> DetallePedido { get; set; }
     }

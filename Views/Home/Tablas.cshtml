@@ -1,9 +1,10 @@
-﻿@{
-    ViewData["Title"] = "Tablas";
+﻿@{ViewData["Title"] = "Tablas";
 }
+@{
 <h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
-
+<h3>@ViewData["Message"]</h3><br />
+<h1>@ViewData["Model"]</h1>
+}
 <h2>Tablas proyecto SIPA</h2>
 <div class="btn-group-vertical" role="toolbar" aria-label="Toolbar with button groups">
     <div class="btn-group mr-2" role="group" aria-label="First group">
@@ -11,6 +12,7 @@
         <a asp-area="" asp-controller="Autoservicios" asp-action="" class="btn btn-primary" role="button">Autoservicio</a>
         <a asp-area="" asp-controller="Clientes" asp-action="" class="btn btn-primary" role="button">Cliente</a>
         <a asp-area="" asp-controller="Domicilios" asp-action="" class="btn btn-primary" role="button">Domicilio</a>
+        <a asp-area="" asp-controller="DetallePedidos" asp-action="" class="btn btn-primary" role="button">Detalle de pedidos</a>
         <a asp-area="" asp-controller="Empleados" asp-action="" class="btn btn-primary" role="button">Empleado</a>
         <a asp-area="" asp-controller="MetodoPagos" asp-action="" class="btn btn-primary" role="button">Metodo de pago</a>
         <a asp-area="" asp-controller="Pedidos" asp-action="" class="btn btn-primary" role="button">Pedido</a>
@@ -18,7 +20,33 @@
         <a asp-area="" asp-controller="Transportes" asp-action="" class="btn btn-primary" role="button">Transporte</a>
     </div>
 </div>
-<div class="accordion" id="accordionExample">
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="accordion" id="accordionExample">
     <div class="card">
         <div class="card-header" id="headingOne">
             <h2 class="mb-0">
@@ -39,52 +67,52 @@
                     <thead>
                         <tr>
                             <th>
-                                @Html.DisplayNameFor(model => model.Proveedor)
+                                Html.DisplayNameFor(model => model.Proveedor)
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.Nombre)
+                                Html.DisplayNameFor(model => model.Nombre)
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.Cantidad)
+                                Html.DisplayNameFor(model => model.Cantidad)
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.PrecioProveedor)
+                                Html.DisplayNameFor(model => model.PrecioProveedor)
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.PrecioVenta)
+                                Html.DisplayNameFor(model => model.PrecioVenta)
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.Imagen)
+                                Html.DisplayNameFor(model => model.Imagen)
                             </th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var item in Model)
+                        foreach (var item in Model)
                         {
                             <tr>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.Proveedor.Direccion)
+                                    Html.DisplayFor(modelItem => item.Proveedor.Direccion)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.Nombre)
+                                    Html.DisplayFor(modelItem => item.Nombre)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.Cantidad)
+                                    Html.DisplayFor(modelItem => item.Cantidad)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.PrecioProveedor)
+                                    Html.DisplayFor(modelItem => item.PrecioProveedor)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.PrecioVenta)
+                                    Html.DisplayFor(modelItem => item.PrecioVenta)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.Imagen)
+                                    Html.DisplayFor(modelItem => item.Imagen)
                                 </td>
                                 <td>
-                                    <a asp-action="Edit" asp-route-id="@item.ArticuloID">Edit</a> |
-                                    <a asp-action="Details" asp-route-id="@item.ArticuloID">Details</a> |
-                                    <a asp-action="Delete" asp-route-id="@item.ArticuloID">Delete</a>
+                                    <a asp-action="Edit" asp-route-id="item.ArticuloID">Edit</a> |
+                                    <a asp-action="Details" asp-route-id="item.ArticuloID">Details</a> |
+                                    <a asp-action="Delete" asp-route-id="item.ArticuloID">Delete</a>
                                 </td>
                             </tr>
                         }
@@ -123,5 +151,4 @@
         </div>
     </div>
 </div>
-
-
+    -->
