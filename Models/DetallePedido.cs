@@ -8,28 +8,22 @@ namespace SIPA.Models
 {
     public class DetallePedido
     {
-        internal static object articuloID,pedidoID;
+        internal static object articuloID, pedidoID;
         [Display(Name = "DetallePedidoID")]
         public int DetallePedidoID { get; set; }
+
         [Display(Name = "Articulo")]
         public int ArticuloID { get; set; }
+        public int PrecioVenta { get; set; }
         public Articulo Articulo { get; set; }
+
         [Display(Name = "Pedido")]
         public int PedidoID { get; set; }
         public Pedido Pedido { get; set; }
-        public int Cantidad { get; set; }
-        private int _Precio;
-        public int Precio
-        { get
-            {
-                _Precio = Articulo.PrecioVenta*Cantidad;
-                return _Precio;
-            }
-          set
-            {
-                _Precio=value;
-            }
-        }
 
+        public int Cantidad { get; set; }
+        
+        public int Monto { get; set; }
+        
     }
 }

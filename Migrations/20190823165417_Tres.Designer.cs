@@ -3,14 +3,16 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace SIPA.Migrations
 {
     [DbContext(typeof(SIPAContext))]
-    partial class SIPAContextModelSnapshot : ModelSnapshot
+    [Migration("20190823165417_Tres")]
+    partial class Tres
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -115,7 +117,7 @@ namespace SIPA.Migrations
 
                     b.Property<int>("PedidoID");
 
-                    b.Property<int>("PrecioVenta");
+                    b.Property<int>("Total");
 
                     b.HasKey("DetallePedidoID");
 

@@ -37,10 +37,12 @@ namespace SIPA.Controllers
             {
                 return NotFound();
             }
-
+            string query = "SELECT * FROM Articulo WHERE ArticuloID = {2}";
             var articulo = await _context.Articulo
-                .Include(a => a.Proveedor)
-                .FirstOrDefaultAsync(m => m.ArticuloID == id);
+                .FromSql(query, id)
+                .Include(d => d.ArticuloID)
+                .AsNoTracking()
+                .FirstOrDefaultAsync();
             if (articulo == null)
             {
                 return NotFound();

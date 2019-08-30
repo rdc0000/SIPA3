@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace SIPA.Migrations
 {
     [DbContext(typeof(SIPAContext))]
-    [Migration("20190822191506_Tres")]
-    partial class Tres
+    [Migration("20190827184446_Cuatro")]
+    partial class Cuatro
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -113,9 +113,11 @@ namespace SIPA.Migrations
 
                     b.Property<int>("Cantidad");
 
+                    b.Property<int>("Monto");
+
                     b.Property<int>("PedidoID");
 
-                    b.Property<int>("Precio");
+                    b.Property<int>("PrecioVenta");
 
                     b.HasKey("DetallePedidoID");
 

@@ -49,6 +49,7 @@ namespace SIPA.Controllers
         public IActionResult Create()
         {
             ViewData["ArticuloID"] = new SelectList(_context.Articulo, "ArticuloID", "ArticuloID");
+            ViewData["ArticuloID"] = new SelectList(_context.Articulo, "ArticuloID", "PrecioVenta");
             ViewData["PedidoID"] = new SelectList(_context.Pedido, "PedidoID", "PedidoID");
             return View();
         }
@@ -58,7 +59,7 @@ namespace SIPA.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("DetallePedidoID,ArticuloID,PedidoID,Cantidad")] DetallePedido detallePedido)
+        public async Task<IActionResult> Create([Bind("DetallePedidoID,ArticuloID,PrecioVenta,PedidoID,Cantidad,Monto")] DetallePedido detallePedido)
         {
             if (ModelState.IsValid)
             {
@@ -66,7 +67,8 @@ namespace SIPA.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ArticuloID"] = new SelectList(_context.Articulo, "ArticuloID", "ArticuloID", detallePedido.ArticuloID);
+            ViewData["ArticuloID"] = new SelectList(_context.Articulo, "ArticuloID", "Nombre", detallePedido.ArticuloID);
+            ViewData["ArticuloID"] = new SelectList(_context.Articulo, "ArticuloID", "PrecioVenta", detallePedido.ArticuloID);
             ViewData["PedidoID"] = new SelectList(_context.Pedido, "PedidoID", "PedidoID", detallePedido.PedidoID);
             return View(detallePedido);
         }
@@ -84,7 +86,8 @@ namespace SIPA.Controllers
             {
                 return NotFound();
             }
-            ViewData["ArticuloID"] = new SelectList(_context.Articulo, "ArticuloID", "ArticuloID", detallePedido.ArticuloID);
+            ViewData["ArticuloID"] = new SelectList(_context.Articulo, "ArticuloID", "Nombre", detallePedido.ArticuloID);
+            ViewData["ArticuloID"] = new SelectList(_context.Articulo, "ArticuloID", "PrecioVenta", detallePedido.ArticuloID);
             ViewData["PedidoID"] = new SelectList(_context.Pedido, "PedidoID", "PedidoID", detallePedido.PedidoID);
             return View(detallePedido);
         }
@@ -94,7 +97,7 @@ namespace SIPA.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("DetallePedidoID,ArticuloID,PedidoID,Cantidad,Precio")] DetallePedido detallePedido)
+        public async Task<IActionResult> Edit(int id, [Bind("DetallePedidoID,ArticuloID,ArticuloID,PedidoID,Cantidad,Monto")] DetallePedido detallePedido)
         {
             if (id != detallePedido.DetallePedidoID)
             {
@@ -121,7 +124,8 @@ namespace SIPA.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ArticuloID"] = new SelectList(_context.Articulo, "ArticuloID", "ArticuloID", detallePedido.ArticuloID);
+            ViewData["ArticuloID"] = new SelectList(_context.Articulo, "ArticuloID", "Nombre", detallePedido.ArticuloID);
+            ViewData["ArticuloID"] = new SelectList(_context.Articulo, "ArticuloID", "PrecioVenta", detallePedido.ArticuloID);
             ViewData["PedidoID"] = new SelectList(_context.Pedido, "PedidoID", "PedidoID", detallePedido.PedidoID);
             return View(detallePedido);
         }

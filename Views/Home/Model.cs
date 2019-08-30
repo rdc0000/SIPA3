@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SIPA.Views.Home
+namespace SIPA.Views.Home.Tablas
 {
     public class Model
     {
@@ -17,15 +17,15 @@ namespace SIPA.Views.Home
         }
         public void Imprimir()
         {
-            var nombre=(_context.Articulo,"Nombre");
+            var nombre = (_context.Articulo, "Nombre");
             var cantidad = (_context.Articulo, "Cantidad");
+
+
+
+
+
+
+
         }
-        
-
-
-
-
-
-
     }
 }
