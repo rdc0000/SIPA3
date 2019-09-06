@@ -3,14 +3,16 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace SIPA.Migrations
 {
     [DbContext(typeof(SIPAContext))]
-    partial class SIPAContextModelSnapshot : ModelSnapshot
+    [Migration("20190903150134_5")]
+    partial class _5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -107,15 +109,15 @@ namespace SIPA.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("ArticuloID");
+                    b.Property<int>("ArticuloID");
 
                     b.Property<int>("Cantidad");
 
-                    b.Property<int?>("PedidoID");
+                    b.Property<int>("Monto");
 
-                    b.Property<decimal>("PrecioTotal");
+                    b.Property<int>("PedidoID");
 
-                    b.Property<decimal>("Total");
+                    b.Property<int>("PrecioVenta");
 
                     b.HasKey("DetallePedidoID");
 
@@ -279,11 +281,13 @@ namespace SIPA.Migrations
                 {
                     b.HasOne("SIPA.Models.Articulo", "Articulo")
                         .WithMany()
-                        .HasForeignKey("ArticuloID");
+                        .HasForeignKey("ArticuloID")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("SIPA.Models.Pedido", "Pedido")
                         .WithMany()
-                        .HasForeignKey("PedidoID");
+                        .HasForeignKey("PedidoID")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("SIPA.Models.Domicilio", b =>

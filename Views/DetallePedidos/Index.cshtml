@@ -5,7 +5,7 @@
 }
 
 <h2>Index</h2>
-<br />
+
 <p>
     <a asp-action="Create">Create New</a>
 </p>
@@ -13,19 +13,13 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.PrecioVenta)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Articulo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Pedido)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Cantidad)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Monto)
+                @Html.DisplayNameFor(model => model.Total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecioTotal)
             </th>
             <th></th>
         </tr>
@@ -34,19 +28,13 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Articulo.PrecioVenta)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Articulo.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pedido.PedidoID)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Cantidad)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Monto)
+                @Html.DisplayFor(modelItem => item.Total)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioTotal)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.DetallePedidoID">Edit</a> |

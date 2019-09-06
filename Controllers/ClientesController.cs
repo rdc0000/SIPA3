@@ -23,7 +23,8 @@ namespace SIPA.Controllers
         {
             return View(await _context.Cliente.ToListAsync());
         }
-           public IActionResult IndexCl()
+
+        public IActionResult IndexCl()
         {
             return View();
         }
@@ -58,6 +59,28 @@ namespace SIPA.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ClienteID,Nombre,Apellido,Direccion,Email,Telefono,Documento")] Cliente cliente)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(cliente);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(cliente);
+        }
+
+        //GET: Clientes/Crear Usuario
+        public IActionResult Crear()
+        {
+            return View();
+        }
+
+        // POST: Clientes/Crear
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Crear([Bind("ClienteID,Nombre,Apellido,Direccion,Email,Telefono,Documento")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
